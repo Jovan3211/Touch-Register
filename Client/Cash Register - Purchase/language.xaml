@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Cash_Register___Purchase.language"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cash_Register___Purchase"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1024">
+    <Grid x:Name="languageControl" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1024" Height="768" Background="#FF1B99F9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Select language | Izaberite jezik | Sprache auswählen" HorizontalAlignment="Center" Margin="166,208,173,511" VerticalAlignment="Center" FontSize="29.333" Foreground="White"/>
+        <Button x:Name="button_english" Content="English" HorizontalAlignment="Center" Height="74" Margin="262,0,662,0" VerticalAlignment="Center" Width="100" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontSize="16" TouchDown="Button_English_OnMouseDownOrTouchDown" Click="Button_English_OnMouseDownOrTouchDown"/>
+        <Button x:Name="button_srpski" Content="Srpski" HorizontalAlignment="Center" Height="74" Margin="462,0" VerticalAlignment="Center" Width="100" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontSize="16" TouchDown="Button_Srpski_OnMouseDownOrTouchDown" Click="Button_Srpski_OnMouseDownOrTouchDown"/>
+        <Button x:Name="button_deutsch" Content="Deutsch" HorizontalAlignment="Center" Height="74" Margin="662,0,262,0" VerticalAlignment="Center" Width="100" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" FontSize="16" TouchDown="Button_Deutsch_OnMouseDownOrTouchDown" Click="Button_Deutsch_OnMouseDownOrTouchDown"/>
+        <Label x:Name="label1" Content="Note: Only english works." HorizontalAlignment="Center" Margin="854,730,10,10" VerticalAlignment="Center" Foreground="White" FontSize="13.333" Width="160"/>
+        <Label x:Name="label2" Content="Touch Register Client © 2015, Jovan Zlatanović" HorizontalAlignment="Left" Margin="10,730,0,0" VerticalAlignment="Top" Foreground="White" FontSize="13.333"/>
+    </Grid>
+</UserControl>
