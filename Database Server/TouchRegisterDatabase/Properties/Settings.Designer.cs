@@ -26,11 +26,11 @@ namespace TouchRegisterDatabase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\products.mdf;" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Products.mdf;" +
             "Integrated Security=True")]
-        public string productsConnectionString {
+        public string ProductsConnectionString {
             get {
-                return ((string)(this["productsConnectionString"]));
+                return ((string)(this["ProductsConnectionString"]));
             }
         }
     }

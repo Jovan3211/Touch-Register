@@ -20,9 +20,9 @@ namespace TouchRegisterDatabase {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("productsDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ProductsDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class productsDataSet : global::System.Data.DataSet {
+    public partial class ProductsDataSet : global::System.Data.DataSet {
         
         private TableDataTable tableTable;
         
@@ -30,7 +30,7 @@ namespace TouchRegisterDatabase {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public productsDataSet() {
+        public ProductsDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TouchRegisterDatabase {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected productsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ProductsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace TouchRegisterDatabase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            productsDataSet cln = ((productsDataSet)(base.Clone()));
+            ProductsDataSet cln = ((ProductsDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace TouchRegisterDatabase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "productsDataSet";
+            this.DataSetName = "ProductsDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/productsDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ProductsDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTable = new TableDataTable();
@@ -225,7 +225,7 @@ namespace TouchRegisterDatabase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            productsDataSet ds = new productsDataSet();
+            ProductsDataSet ds = new ProductsDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -281,11 +281,11 @@ namespace TouchRegisterDatabase {
             
             private global::System.Data.DataColumn columnBarcode;
             
-            private global::System.Data.DataColumn columnName;
+            private global::System.Data.DataColumn columnProduct_name;
             
             private global::System.Data.DataColumn columnManufacturer;
             
-            private global::System.Data.DataColumn columnPriceNoTax;
+            private global::System.Data.DataColumn _columnPrice__no_tax_;
             
             private global::System.Data.DataColumn columnPrice;
             
@@ -332,9 +332,9 @@ namespace TouchRegisterDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn Product_nameColumn {
                 get {
-                    return this.columnName;
+                    return this.columnProduct_name;
                 }
             }
             
@@ -348,9 +348,9 @@ namespace TouchRegisterDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PriceNoTaxColumn {
+            public global::System.Data.DataColumn _Price__no_tax_Column {
                 get {
-                    return this.columnPriceNoTax;
+                    return this._columnPrice__no_tax_;
                 }
             }
             
@@ -399,13 +399,13 @@ namespace TouchRegisterDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow AddTableRow(int Barcode, string Name, string Manufacturer, decimal PriceNoTax, decimal Price) {
+            public TableRow AddTableRow(int Barcode, string Product_name, string Manufacturer, decimal _Price__no_tax_, decimal Price) {
                 TableRow rowTableRow = ((TableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Barcode,
-                        Name,
+                        Product_name,
                         Manufacturer,
-                        PriceNoTax,
+                        _Price__no_tax_,
                         Price};
                 rowTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTableRow);
@@ -437,9 +437,9 @@ namespace TouchRegisterDatabase {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnBarcode = base.Columns["Barcode"];
-                this.columnName = base.Columns["Name"];
+                this.columnProduct_name = base.Columns["Product name"];
                 this.columnManufacturer = base.Columns["Manufacturer"];
-                this.columnPriceNoTax = base.Columns["PriceNoTax"];
+                this._columnPrice__no_tax_ = base.Columns["Price (no tax)"];
                 this.columnPrice = base.Columns["Price"];
             }
             
@@ -448,23 +448,25 @@ namespace TouchRegisterDatabase {
             private void InitClass() {
                 this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
+                this.columnProduct_name = new global::System.Data.DataColumn("Product name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProduct_name);
                 this.columnManufacturer = new global::System.Data.DataColumn("Manufacturer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnManufacturer);
-                this.columnPriceNoTax = new global::System.Data.DataColumn("PriceNoTax", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPriceNoTax);
+                this._columnPrice__no_tax_ = new global::System.Data.DataColumn("Price (no tax)", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this._columnPrice__no_tax_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnPrice__no_tax_");
+                this._columnPrice__no_tax_.ExtendedProperties.Add("Generator_UserColumnName", "Price (no tax)");
+                base.Columns.Add(this._columnPrice__no_tax_);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBarcode}, true));
                 this.columnBarcode.AllowDBNull = false;
                 this.columnBarcode.Unique = true;
-                this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 50;
+                this.columnProduct_name.AllowDBNull = false;
+                this.columnProduct_name.MaxLength = 50;
                 this.columnManufacturer.AllowDBNull = false;
                 this.columnManufacturer.MaxLength = 50;
-                this.columnPriceNoTax.AllowDBNull = false;
+                this._columnPrice__no_tax_.AllowDBNull = false;
                 this.columnPrice.AllowDBNull = false;
                 this.ExtendedProperties.Add("Generator_RowClassName", "TableRow");
                 this.ExtendedProperties.Add("Generator_RowEvArgName", "TableRowChangeEvent");
@@ -540,7 +542,7 @@ namespace TouchRegisterDatabase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                productsDataSet ds = new productsDataSet();
+                ProductsDataSet ds = new ProductsDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -626,12 +628,12 @@ namespace TouchRegisterDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Name {
+            public string Product_name {
                 get {
-                    return ((string)(this[this.tableTable.NameColumn]));
+                    return ((string)(this[this.tableTable.Product_nameColumn]));
                 }
                 set {
-                    this[this.tableTable.NameColumn] = value;
+                    this[this.tableTable.Product_nameColumn] = value;
                 }
             }
             
@@ -648,12 +650,12 @@ namespace TouchRegisterDatabase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal PriceNoTax {
+            public decimal _Price__no_tax_ {
                 get {
-                    return ((decimal)(this[this.tableTable.PriceNoTaxColumn]));
+                    return ((decimal)(this[this.tableTable._Price__no_tax_Column]));
                 }
                 set {
-                    this[this.tableTable.PriceNoTaxColumn] = value;
+                    this[this.tableTable._Price__no_tax_Column] = value;
                 }
             }
             
@@ -704,7 +706,7 @@ namespace TouchRegisterDatabase {
         }
     }
 }
-namespace TouchRegisterDatabase.productsDataSetTableAdapters {
+namespace TouchRegisterDatabase.ProductsDataSetTableAdapters {
     
     
     /// <summary>
@@ -829,48 +831,46 @@ namespace TouchRegisterDatabase.productsDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Table";
             tableMapping.ColumnMappings.Add("Barcode", "Barcode");
-            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Product name", "Product name");
             tableMapping.ColumnMappings.Add("Manufacturer", "Manufacturer");
-            tableMapping.ColumnMappings.Add("PriceNoTax", "PriceNoTax");
+            tableMapping.ColumnMappings.Add("Price (no tax)", "Price (no tax)");
             tableMapping.ColumnMappings.Add("Price", "Price");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([Barcode] = @Original_Barcode) AND ([Name] = @O" +
-                "riginal_Name) AND ([Manufacturer] = @Original_Manufacturer) AND ([PriceNoTax] = " +
-                "@Original_PriceNoTax) AND ([Price] = @Original_Price))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([Barcode] = @Original_Barcode) AND ([Product na" +
+                "me] = @Original_Product_name) AND ([Manufacturer] = @Original_Manufacturer) AND " +
+                "([Price (no tax)] = @p2) AND ([Price] = @Original_Price))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Barcode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Barcode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manufacturer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PriceNoTax", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PriceNoTax", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price (no tax)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Table] ([Barcode], [Name], [Manufacturer], [PriceNoTax], [Pric" +
-                "e]) VALUES (@Barcode, @Name, @Manufacturer, @PriceNoTax, @Price);\r\nSELECT Barcod" +
-                "e, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcode = @Barcode)" +
-                "";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Table] ([Barcode], [Product name], [Manufacturer], [Price (no tax)], [Price]) VALUES (@Barcode, @Product_name, @Manufacturer, @p1, @Price);
+SELECT Barcode, [Product name], Manufacturer, [Price (no tax)], Price FROM [Table] WHERE (Barcode = @Barcode)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Barcode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Barcode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PriceNoTax", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PriceNoTax", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price (no tax)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [Barcode] = @Barcode, [Name] = @Name, [Manufacturer] = @Manufacturer, [PriceNoTax] = @PriceNoTax, [Price] = @Price WHERE (([Barcode] = @Original_Barcode) AND ([Name] = @Original_Name) AND ([Manufacturer] = @Original_Manufacturer) AND ([PriceNoTax] = @Original_PriceNoTax) AND ([Price] = @Original_Price));
-SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcode = @Barcode)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [Barcode] = @Barcode, [Product name] = @Product_name, [Manufacturer] = @Manufacturer, [Price (no tax)] = @p1, [Price] = @Price WHERE (([Barcode] = @Original_Barcode) AND ([Product name] = @Original_Product_name) AND ([Manufacturer] = @Original_Manufacturer) AND ([Price (no tax)] = @p2) AND ([Price] = @Original_Price));
+SELECT Barcode, [Product name], Manufacturer, [Price (no tax)], Price FROM [Table] WHERE (Barcode = @Barcode)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Barcode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Barcode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Product_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PriceNoTax", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PriceNoTax", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price (no tax)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Barcode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Barcode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Product_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Product name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Manufacturer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Manufacturer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PriceNoTax", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PriceNoTax", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price (no tax)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -878,7 +878,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TouchRegisterDatabase.Properties.Settings.Default.productsConnectionString;
+            this._connection.ConnectionString = global::TouchRegisterDatabase.Properties.Settings.Default.ProductsConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -887,7 +887,8 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM dbo.[Table]";
+            this._commandCollection[0].CommandText = "SELECT Barcode, [Product name], Manufacturer, [Price (no tax)], Price FROM dbo.[T" +
+                "able]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -895,7 +896,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(productsDataSet.TableDataTable dataTable) {
+        public virtual int Fill(ProductsDataSet.TableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -908,9 +909,9 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual productsDataSet.TableDataTable GetData() {
+        public virtual ProductsDataSet.TableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            productsDataSet.TableDataTable dataTable = new productsDataSet.TableDataTable();
+            ProductsDataSet.TableDataTable dataTable = new ProductsDataSet.TableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -918,14 +919,14 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(productsDataSet.TableDataTable dataTable) {
+        public virtual int Update(ProductsDataSet.TableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(productsDataSet dataSet) {
+        public virtual int Update(ProductsDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Table");
         }
         
@@ -948,13 +949,13 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Barcode, string Original_Name, string Original_Manufacturer, decimal Original_PriceNoTax, decimal Original_Price) {
+        public virtual int Delete(int Original_Barcode, string Original_Product_name, string Original_Manufacturer, decimal p2, decimal Original_Price) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Barcode));
-            if ((Original_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Name");
+            if ((Original_Product_name == null)) {
+                throw new global::System.ArgumentNullException("Original_Product_name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Product_name));
             }
             if ((Original_Manufacturer == null)) {
                 throw new global::System.ArgumentNullException("Original_Manufacturer");
@@ -962,7 +963,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Manufacturer));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_PriceNoTax));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(p2));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Price));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -984,13 +985,13 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Barcode, string Name, string Manufacturer, decimal PriceNoTax, decimal Price) {
+        public virtual int Insert(int Barcode, string Product_name, string Manufacturer, decimal p1, decimal Price) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Barcode));
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+            if ((Product_name == null)) {
+                throw new global::System.ArgumentNullException("Product_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Product_name));
             }
             if ((Manufacturer == null)) {
                 throw new global::System.ArgumentNullException("Manufacturer");
@@ -998,7 +999,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Manufacturer));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(PriceNoTax));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(p1));
             this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(Price));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1020,13 +1021,13 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Barcode, string Name, string Manufacturer, decimal PriceNoTax, decimal Price, int Original_Barcode, string Original_Name, string Original_Manufacturer, decimal Original_PriceNoTax, decimal Original_Price) {
+        public virtual int Update(int Barcode, string Product_name, string Manufacturer, decimal p1, decimal Price, int Original_Barcode, string Original_Product_name, string Original_Manufacturer, decimal p2, decimal Original_Price) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Barcode));
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+            if ((Product_name == null)) {
+                throw new global::System.ArgumentNullException("Product_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Product_name));
             }
             if ((Manufacturer == null)) {
                 throw new global::System.ArgumentNullException("Manufacturer");
@@ -1034,14 +1035,14 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Manufacturer));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(PriceNoTax));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(p1));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Price));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Barcode));
-            if ((Original_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Name");
+            if ((Original_Product_name == null)) {
+                throw new global::System.ArgumentNullException("Original_Product_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Product_name));
             }
             if ((Original_Manufacturer == null)) {
                 throw new global::System.ArgumentNullException("Original_Manufacturer");
@@ -1049,7 +1050,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Manufacturer));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_PriceNoTax));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(p2));
             this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_Price));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1071,8 +1072,8 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Manufacturer, decimal PriceNoTax, decimal Price, int Original_Barcode, string Original_Name, string Original_Manufacturer, decimal Original_PriceNoTax, decimal Original_Price) {
-            return this.Update(Original_Barcode, Name, Manufacturer, PriceNoTax, Price, Original_Barcode, Original_Name, Original_Manufacturer, Original_PriceNoTax, Original_Price);
+        public virtual int Update(string Product_name, string Manufacturer, decimal p1, decimal Price, int Original_Barcode, string Original_Product_name, string Original_Manufacturer, decimal p2, decimal Original_Price) {
+            return this.Update(Original_Barcode, Product_name, Manufacturer, p1, Price, Original_Barcode, Original_Product_name, Original_Manufacturer, p2, Original_Price);
         }
     }
     
@@ -1167,7 +1168,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(productsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ProductsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tableTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1186,7 +1187,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(productsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ProductsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tableTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1204,7 +1205,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(productsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ProductsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tableTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1246,7 +1247,7 @@ SELECT Barcode, Name, Manufacturer, PriceNoTax, Price FROM [Table] WHERE (Barcod
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(productsDataSet dataSet) {
+        public virtual int UpdateAll(ProductsDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
